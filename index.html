@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web 2</title>
+</head>
+<style>
+    body {
+        background: darkorchid;
+    }
+    ol {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 900px;
+    }
+    li {
+        margin: 12px;
+    }
+    li div{
+        display: flex;
+        flex-direction: column;
+        max-width: 900px;
+        font-size: 1.5rem;
+        gap: 0;
+    }
+    div *{
+        margin: 0px;
+    }
+    div h4 {
+        font-size: 1.5rem;
+        color: white;
+    }
+    img {
+        border-radius: 10px;
+    }
+</style>
+<body>
+<ol>
+    <li> 
+        <div><h5>получить главную страницу методом GET в протоколе HTTP 1.0;</h5>
+            <h4> получен код главной страницы со статусом 200</h4><img alt="" src="src/1.jpg"/></div></li>
+    <li><div>
+        <h5>получить внутреннюю страницу методом GET в протоколе HTTP 1.1;</h5>
+        <h4> Получен код страницы files/index.php со статусом 404, не найдено</h4>
+        <img alt="" src="src/2.jpg"/> </div></li>
+    <li><div>
+        <h5> определить размер файла file.tar.gz, не скачивая его;</h5>
+        <h4> Выполнен запрос HEAD и получен ответ Content-Length: 11335 </h4><img alt="" src="src/3.jpg"/></div> </li>
+    <li><div>
+        <h5>определить медиатип ресурса /image.png; </h5>
+        <h4> Выполнен запрос HEAD и получен ответ Content-Type: image/png</h4><img alt="" src="src/4.jpg"/></div> </li>
+    <li><div>
+        <h5>отправить комментарий на сервер по адресу /index.php;</h5>
+        <h4>Выполнен POST запрос с типом application/x-www-form-urlencoded с комментарием hi, получен соответсвующий ответ с передаваемым сообщением</h4><img alt="" src="src/5.jpg"/></div></li>
+    <li><div>
+        <h5>получить первые 100 байт файла /file.tar.gz;   </h5>
+        <h4> Выполнен GET запрос, с заголовком Range=0-99 - первые 100 байт. В ответе запрашиваемые байты</h4><img alt="" src="src/6.jpg"/></div></li>
+    <li><div>
+        <h5>определить кодировку ресурса /index.php.</h5>
+        <h4>Выполнен HEAD запрос. Получен ответ charset=UTF-8. Соответственно кодировка UTF-8</h4>
+        <img alt="" src="src/7.jpg"/></div> </li>
+</ol>
+</body>
+</html>
